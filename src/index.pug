@@ -1,8 +1,10 @@
-html 	
-	head 	
-		link(rel="stylesheet", href="css/style.min.css")
-	body 
-		include html/header
-		main.page 
-		include html/footer
-		script(src='js/app.min.js')
+doctype html
+html(lang="en") 	
+  include head
+  body 
+    include html/header
+    include html/job
+    include html/about
+    include html/clients
+    include html/footer
+    script(src='js/app.min.js')

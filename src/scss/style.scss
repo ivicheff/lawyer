@@ -3,9 +3,29 @@
 @import "config";
 @import "mixins";
 @import "null";
-@import "./blocks/footer";
 @import "./blocks/header";
+@import "./blocks/job";
+@import "./blocks/about";
+@import "./blocks/clients";
+@import "./blocks/footer";
+
 
 body {
   background-color: #111;
+}
+
+html, body, section {
+  block-size: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

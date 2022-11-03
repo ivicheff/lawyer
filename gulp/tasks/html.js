@@ -10,13 +10,13 @@ export const html = () => {
 				title: "HTML",
 				message: "Error: <%= error.message %>"
 			})))
-		.pipe(fileinclude())
-		/* 		.pipe(pug({
-					//Сжатие html файла
-					pretty: true,
-					//Показывать в терминале какой файл обработан
-					verbose: true
-				})) */
+		//.pipe(fileinclude())
+		.pipe(pug({
+			//Сжатие html файла
+			pretty: true,
+			//Показывать в терминале какой файл обработан
+			verbose: true
+		}))
 		.pipe(app.plugins.replace(/@img\//g, 'img/'))
 		.pipe(app.plugins.if(
 			app.isBuild,
