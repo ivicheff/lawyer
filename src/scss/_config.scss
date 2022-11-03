@@ -1,0 +1,36 @@
+//<Fonts>
+//&display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular");
+
+//<Font-weights>
+$font-weights: (
+  "bold": 700,
+  "medium": 600,
+  "regular": 400,
+  "light": 300,
+  "thin": 100
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name)
+};
+
+//<Icon fonts>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+//<Swiper>
+// @import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+
+//<Default font>
+$fontFamily: none;
+
+//<Variables>
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1500px;
+
+//<Colors>
+$primary-color: #111;
+$secondary-color: #fff;
+$neutral: #000;
+$other: #151515;
