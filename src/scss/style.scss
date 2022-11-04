@@ -10,8 +10,15 @@
 @import "./blocks/footer";
 
 
+html {
+  font-size: 10px;
+}
+
 body {
-  background-color: #111;
+  background-color: $primary-color;
+  font-family: $fontFamily;
+  font-weight: 400;
+  color: $secondary-color;
 }
 
 html, body, section {
@@ -28,4 +35,76 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+//TEXT
+//usual
+.plus-small-text {
+  font-size: 1.3rem;
+}
+
+.small-text {
+  font-size: 1.8rem;
+}
+
+.medium-text {
+  font-size: 2.4rem;
+}
+
+.plus-medium-text {
+  font-size: 3rem;
+}
+
+.extra-medium-text {
+  font-size: 3.6rem;
+}
+
+.large-text {
+  font-size: 4.8rem;
+}
+
+.plus-large-text {
+  font-size: 5.6rem;
+}
+
+.extra-large-text {
+  font-size: 14.4rem;
+}
+//italic
+.plus-small-italic-text {
+  @extend .plus-small-text;
+  font-style: italic;
+}
+
+.medium-italic-text {
+  @extend .medium-text;
+  font-style: italic;
+}
+//underline
+.plus-small-underline-text {
+  @extend .plus-small-text;
+  text-decoration: underline;
+}
+
+.medium-underline-text {
+  @extend .medium-text;
+  text-decoration: underline;
+}
+
+//BUTTONS
+.button {
+  width: 37rem;
+  height: 7.5rem;
+}
+
+.light-button {
+  @extend .button;
+  background-color: $button-primary-color;
+  color: $button-secondary-color;
+}
+
+.dark-button {
+  @extend .button;
+  background-color: $button-secondary-color;
+  color: $neutral-color;
 }

@@ -15,9 +15,7 @@ a:focus,a:active{outline: none;}
 html,body{
 	height: 100%;
 	width: 100%;
-	font-size: 100%;
 	line-height: 1.2;
-	font-size: 28px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -31,5 +29,3 @@ a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
