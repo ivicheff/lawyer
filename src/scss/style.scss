@@ -34,7 +34,8 @@ section {
   scroll-snap-stop: always;  
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 //TEXT
@@ -107,4 +108,20 @@ section {
   @extend .button;
   background-color: $button-secondary-color;
   color: $neutral-color;
+}
+
+.contacts {
+  display: flex;
+  &__item {
+    color: $neutral-color;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+      background: none;
+    }
+  }
 }

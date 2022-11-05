@@ -2,10 +2,40 @@
 /* Large Devices, Laptops */
 @media only screen and (max-width: 1500px) {
 
+
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-
+  .header {
+    overflow: hidden;
+  }
+  .navbar {
+    justify-content: center;
+    &__nav-links {
+      position: absolute;
+      height: 92vh;
+      top: 8vh;
+      background: gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 130%;
+      transform: translateY(-110%);
+      transition:  0.2s ease-in;
+    }
+    &__name {
+      cursor: pointer;
+      & > .lawyer-name  {
+        display: none !important;
+      }
+      & > .menu {
+        display: flex !important;
+      }
+    }
+  }
+  .contacts {
+    display: none !important;
+  }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -35,9 +65,12 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
 
+
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+
+
 
 }
 /* Large Devices, Wide Screens */
