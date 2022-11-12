@@ -1,14 +1,14 @@
-// @font-face {
-// 	font-family: 'PlayFairDisplay';
-// 	font-display: swap;
-// 	src: url("../fonts/PlayfairDisplay-VariableFont_wght.woff") format("woff");
-// 	font-weight: 400;
-// 	font-style: normal;
-// }
-// @font-face {
-// 	font-family: 'PlayFairDisplay';
-// 	font-display: swap;
-// 	src: url("../fonts/PlayfairDisplay-VariableFont_wght.woff") format("woff");
-// 	font-weight: 400;
-// 	font-style: italic;
-// }
+@font-face {
+	font-family: PlayfairDisplay;
+	font-display: swap;
+	src: url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: PlayfairDisplay;
+	font-display: swap;
+	src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}

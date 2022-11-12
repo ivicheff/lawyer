@@ -3,12 +3,18 @@
 @import "config";
 @import "mixins";
 @import "null";
+
 @import "./blocks/header";
 @import "./blocks/job";
 @import "./blocks/about";
 @import "./blocks/clients";
 @import "./blocks/footer";
 
+@import "./adaptive/header";
+@import "./adaptive/job";
+@import "./adaptive/about";
+@import "./adaptive/clients";
+@import "./adaptive/footer";
 
 html {
   font-size: 10px;
@@ -94,20 +100,40 @@ section {
 
 //BUTTONS
 .button {
+  @extend .extra-medium-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 37rem;
   height: 7.5rem;
+  text-align: center;
+  cursor: pointer;
 }
 
-.light-button {
+.button--light {
   @extend .button;
   background-color: $button-primary-color;
   color: $button-secondary-color;
+  &:hover {
+    background-color: $button-primary-color;
+    color: $primary-color;
+  }
+  &:active {
+    opacity: 0.8;
+  }
 }
 
-.dark-button {
+.button--dark {
   @extend .button;
   background-color: $button-secondary-color;
   color: $neutral-color;
+  &:hover {
+    background-color: $button-secondary-color;
+    color: $secondary-color;
+  }
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .contacts {
@@ -124,4 +150,92 @@ section {
       background: none;
     }
   }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  
+
+  &__inner {
+    // height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    // flex-direction: column;
+  }
+}
+
+//MAIL SEND
+.email-button {
+  & ::placeholder {
+    opacity: 1;
+  }
+
+  &__button {
+  }
+
+  &__form {
+    display: none;
+  }
+
+  &__input-mail-form  {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px
+  }
+
+  &__submit {
+    margin: 40px 0 0 0;
+  }
+}
+
+
+.input-mail-form {
+
+  &__mails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__from-mail {
+  }
+
+  &__to-mail {
+  }
+
+  &__sender {
+    line-height: 0;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    width: auto;
+    text-decoration: underline;
+  }
+
+  &__receiver {
+    line-height: 0;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    width: auto;
+    text-decoration: underline;
+  }
+
+  &__message {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 20px 0 0 0;
+    border: 1px solid white;
+  }
+}
+.mail {
+  display: flex;
+
 }

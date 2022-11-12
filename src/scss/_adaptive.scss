@@ -1,8 +1,10 @@
+@use "config";
 /*============== Desktop First ==============*/
 /* Large Devices, Laptops */
 @media only screen and (max-width: 1500px) {
-
-
+  .navbar {
+    height: 7vh;
+  }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -13,28 +15,91 @@
     justify-content: center;
     &__nav-links {
       position: absolute;
-      height: 92vh;
-      top: 8vh;
-      background: gray;
+      height: 94vh;
+      top: 9vh;
+      background-color: config.$primary-trasnparent-color;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 130%;
+      align-items: flex-start;
+      width: 100% !important;
       transform: translateY(-110%);
       transition:  0.2s ease-in;
+
     }
     &__name {
       cursor: pointer;
-      & > .lawyer-name  {
-        display: none !important;
-      }
-      & > .menu {
+    }
+    &__lawyer-name  {
+      display: none !important;
+    }
+    &__menu {
         display: flex !important;
-      }
     }
   }
   .contacts {
     display: none !important;
+  }
+  .nav-links {
+    align-items: flex-end !important;
+    &__inner {
+      height: 70vh;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  //MAIL SEND
+  .email-button {
+    display: none;
+    z-index: 100;
+		&__button {
+		}
+
+		&__form {
+		}
+
+		&__input-mail-form  {
+      background-color: transparent !important;
+		}
+
+		&__sender {
+		}
+
+		&__submit {
+		}
+  }
+  .input-mail-form {
+      &__mails {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__from-mail {
+      }
+
+      &__to-mail {
+      }
+
+      &__sender {
+        
+      }
+
+      &__receiver {
+      }
+
+      &__message {
+      }
+  }
+  .mail {
+  }
+  //BUTTON
+  .button {
+    // @extend .extra-medium-text;
+    width: 21.5rem !important;
+    height: 5rem !important;
+    font-size: 1.8rem !important;
+    & p {
+      font-size: 1.8rem !important;
+    }
   }
 }
 /* Medium Devices, Desktops */
