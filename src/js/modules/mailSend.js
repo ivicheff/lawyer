@@ -8,37 +8,40 @@ const showForm = () => {
   const emailMessage = document.querySelector('.input-mail-form__message');
   const emailSubmit = document.querySelector('.email-button__submit');
   const emailReceiver = document.querySelector('.input-mail-form__receiver');
+  const navLinksInner = document.querySelector('.nav-links__inner');
 
   logo.addEventListener('click', () => {
-    if (email.style.display != "flex") {
-      email.style.display = "flex";
-    } else {
-      email.style.display = "none";
-    }
+    // if (email.style.display != "flex") {
+    //   email.style.display = "flex";
+    // } else {
+    //   email.style.display = "none";
+    // }
+    return (email.style.display != "flex" ? email.style.display = "flex" : null)
   })
+
+
 
   emailButton.addEventListener('click', () => {
     let width = window.innerWidth;
     if (width <= 1200) {
       emailForm.style.flexDirection = "column";
-
+      navLinksInner.style.display = "none";
     }
-
-
     if (emailForm.style.display != "flex") {
       emailForm.style.display = "flex";
       emailForm.style.flexDirection = "column";
-      emailButton.style.display = "none";
-      emailReceiver.value = "ivan.ivichev@yandex.com"
       emailForm.style.alignItems = "center";
-      // styles
+
+      emailButton.style.display = "none";
+      //MAIL VALUE
+      emailReceiver.value = "ivan.ivichev@yandex.com"
     }
   })
 
   emailSubmit.addEventListener('click', () => {
     emailForm.style.display = "none";
     emailButton.style.display = "flex";
-
+    return (navLinksInner.style.display == "none" ? navLinksInner.style.display = "flex" : null)
   })
 
 }
