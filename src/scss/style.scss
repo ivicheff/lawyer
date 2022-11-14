@@ -1,5 +1,6 @@
 @import "fonts";
 @import "adaptive";
+@import "animations";
 @import "config";
 @import "mixins";
 @import "null";
@@ -38,10 +39,6 @@ html {
 section {
   scroll-snap-align: start;
   scroll-snap-stop: always;  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
 //TEXT
@@ -184,28 +181,46 @@ section {
   &__input-mail-form  {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    padding: 20px
+    align-items: center;
+    justify-content: space-around;
+    background-color: $primary-trasnparent-color;
+
   }
 
   &__submit {
-    margin: 40px 0 0 0;
+    margin: 5rem 0 0 0;
   }
 }
 
 
 .input-mail-form {
-
+  animation: fadein 1s ease-in alternate 1;
+  height: 15rem ;
+  width: 100rem;
   &__mails {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    //align-items: center;
+    width: 92.8rem;
+    margin: 1rem 0 0 0;
   }
 
   &__from-mail {
+    display: flex;
+    align-items: flex-end;
+    & > p {
+      margin: 0 5rem 0 0;
+
+    }
+
   }
 
   &__to-mail {
+    display: flex;
+    align-items: flex-end;
+    & > p {
+      margin: 0 5rem 0 0;
+    }
   }
 
   &__sender {
@@ -230,9 +245,10 @@ section {
     background-color: transparent;
     color: white;
     text-align: center;
-    padding: 30px;
-    margin: 20px 0 0 0;
-    border: 1px solid white;
+    height: 6.3rem;
+    width: 92.8rem;
+    margin: 0 0 2rem 0;
+    border: .1rem solid white;
   }
 }
 .mail {

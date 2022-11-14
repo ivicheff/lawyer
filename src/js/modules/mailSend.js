@@ -1,26 +1,21 @@
 import logo from './menu.js';
 
+
 const showForm = () => {
+  const emailForm = document.querySelector('.email-button__form');
   const email = document.querySelector('.email-button');
   const emailButton = document.querySelector('.email-button__button');
-  const emailForm = document.querySelector('.email-button__form');
   const emailSender = document.querySelector('.input-mail-form__sender');
   const emailMessage = document.querySelector('.input-mail-form__message');
   const emailSubmit = document.querySelector('.email-button__submit');
   const emailReceiver = document.querySelector('.input-mail-form__receiver');
   const navLinksInner = document.querySelector('.nav-links__inner');
+  const navbarLinks = document.querySelector('.navbar__nav-links');
 
   logo.addEventListener('click', () => {
-    // if (email.style.display != "flex") {
-    //   email.style.display = "flex";
-    // } else {
-    //   email.style.display = "none";
-    // }
-    return (email.style.display != "flex" ? email.style.display = "flex" : null)
+    return (email.style.display != "flex" ? email.style.display = "flex" : email.style.display = "none");
   })
-
-
-
+  
   emailButton.addEventListener('click', () => {
     let width = window.innerWidth;
     if (width <= 1200) {
@@ -47,5 +42,3 @@ const showForm = () => {
 }
 
 showForm();
-
-

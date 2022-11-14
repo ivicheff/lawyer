@@ -1,8 +1,8 @@
 const logo = document.querySelector(".navbar__name");
-const nav = document.querySelector(".navbar__nav-links");
-const navLinks = document.querySelectorAll('.navbar__nav-links li');
 
 const navSlide = () => {
+  const nav = document.querySelector(".navbar__nav-links");
+  const navLinks = document.querySelectorAll('.navbar__nav-links li');
   logo.addEventListener('click', () => {
     let width = window.innerWidth
     //Toggle Nav
@@ -11,15 +11,15 @@ const navSlide = () => {
     }
     //Animate links
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = ''
-      } else {
-        link.style.animation = `navLinkFade 0.05s ease forwards ${index /12}s`;
-      }
+      true ? link.style.animation = '' : 
+      link.style.animation = `navLinkFade 0.1s ease forwards ${index /12}s`;
+
     });
   });
 }
 
+
 navSlide();
 
 export default logo;
+

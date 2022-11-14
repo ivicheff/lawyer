@@ -8,13 +8,29 @@
   background-blend-mode: multiply;
   background-color: $background-color;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__navbar {
+    display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    flex: 1 1 auto;
+  }
+
+  &__email-button {
+    animation: fadein 1s ease-in alternate 1;
+    margin: 0 0 12rem 0;
+  }
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 6vh;
+  max-height: 7vh;
   width: 100%;
   background: $primary-color;
   &__lawyer-name {
@@ -33,23 +49,6 @@
     transform: translateY(0%);
     width: 100%;
   }
-}
 
-.header {
-  &__navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-  }
-
-  &__name {
-    margin-left: 20rem;
-    align-self: center;
-  }
-
-  &__email-button {
-    
-  }
 }
 

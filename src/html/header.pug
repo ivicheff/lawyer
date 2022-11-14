@@ -29,13 +29,13 @@ section#home.header(style="background-image: url('../../img/soulgoodman.webp')")
     button.email-button__button.button--dark
       p.extra-medium-text send application
     form.email-button__form(action='mailto:jo4npetrov@yandex.com', method='post', enctype='text/plain')
-      .email-button__input-mail-form.input-mail
+      .email-button__input-mail-form.input-mail-form
         .input-mail-form__mails
           .input-mail-form__from-mail.mail
-            p from
+            p.plus-small-text from
             input.input-mail-form__sender(type='email', name='sender', placeholder='                                              ', required='')
           .input-mail-form__to-mail.mail
-            p to
+            p.plus-small-text to
             input.input-mail-form__receiver(type='text', name='receiver', value='', readonly='', required='')
         input.input-mail-form__message(type='text', name='message', placeholder='your message...', required='')
       input.email-button__submit.button--dark(type='submit', value='send application')
